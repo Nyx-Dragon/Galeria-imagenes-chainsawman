@@ -16,6 +16,20 @@
     --primary-color: #333;
     --secondary-color: #fff;
     --hover-color: #555;
+    --border-color: #ccc;
+    --font-color: #333;
+    --button-hover-size: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body {
@@ -66,12 +80,14 @@ header h1 {
 .character-card {
     background-color: white;
     border-radius: 10px;
+    border: 1px solid var(--border-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     margin: 20px;
     padding: 20px;
-    max-width: 250px;
+    max-width: 300px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; /* Asegurarse de que el contenido se mantenga dentro del borde */
 }
 
 .character-card:hover {
@@ -82,9 +98,17 @@ header h1 {
 .character-img {
     border-radius: 10px;
     border: none;
-    height: 300px;
-    width: 100%;
+    max-width: 100%; /* Asegura que las imágenes no sean más anchas que el contenedor */
+    max-height: 300px; /* Limita la altura máxima */
     object-fit: cover;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.character-img.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .buttons {
@@ -113,12 +137,12 @@ header h1 {
 
 .edit-btn:hover {
     background-color: var(--edit-btn-hover-color);
-    transform: var(--button-hover-transform);
+    transform: var(--button-hover-transform) var(--button-hover-size);
 }
 
 .delete-btn:hover {
     background-color: var(--delete-btn-hover-color);
-    transform: var(--button-hover-transform);
+    transform: var(--button-hover-transform) var(--button-hover-size);
 }
 
 footer {
@@ -163,7 +187,7 @@ button#back-to-home {
 
 button#back-to-home:hover {
     background-color: #45a049;
-    transform: var(--button-hover-transform);
+    transform: var(--button-hover-transform) var(--button-hover-size);
 }
 
 button {
@@ -178,5 +202,5 @@ button {
 
 button:hover {
     background-color: var(--hover-color);
-    transform: var(--button-hover-transform);
+    transform: var(--button-hover-transform) var(--button-hover-size);
 }
