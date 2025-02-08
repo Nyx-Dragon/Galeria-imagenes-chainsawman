@@ -1,0 +1,46 @@
+.character-container {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 320px;
+}
+
+.character-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+main {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+p,
+ul {
+    margin: 20px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+b {
+    font-weight: bold;
+}

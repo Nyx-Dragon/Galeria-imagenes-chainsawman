@@ -1,0 +1,182 @@
+:root {
+    --background-color: #ee3434;
+    --text-color: #000000;
+    --header-background-color: rgb(192, 192, 82);
+    --logo-background-color: red;
+    --edit-btn-color: rgb(109, 204, 196);
+    --delete-btn-color: rgb(88, 9, 13);
+    --edit-btn-hover-color: rgb(23, 10, 139);
+    --delete-btn-hover-color: rgb(212, 9, 9);
+    --footer-background-color: rgb(192, 192, 82);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover-color: rgba(0, 0, 0, 0.2);
+    --link-color: #1100ff;
+    --link-hover-color: #ff0000;
+    --button-hover-transform: translateY(-2px);
+    --primary-color: #333;
+    --secondary-color: #fff;
+    --hover-color: #555;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-background-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logo {
+    width: auto;
+    background-color: var(--logo-background-color);
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flex-container-1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 60px;
+    flex: 1;
+}
+
+.character-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    margin: 20px;
+    padding: 20px;
+    max-width: 250px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px var(--shadow-hover-color);
+}
+
+.character-img {
+    border-radius: 10px;
+    border: none;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn {
+    background-color: var(--edit-btn-color);
+}
+
+.delete-btn {
+    background-color: var(--delete-btn-color);
+}
+
+.edit-btn:hover {
+    background-color: var(--edit-btn-hover-color);
+    transform: var(--button-hover-transform);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-btn-hover-color);
+    transform: var(--button-hover-transform);
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+.footer-links a {
+    color: var(--link-color);
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--link-hover-color);
+}
+
+@media screen and (max-width: 900px) {
+    #flex-container-1 {
+        flex-wrap: wrap;
+    }
+    .character-card {
+        max-width: 100%;
+    }
+}
+
+button#back-to-home {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button#back-to-home:hover {
+    background-color: #45a049;
+    transform: var(--button-hover-transform);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: var(--button-hover-transform);
+}
