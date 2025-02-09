@@ -1,22 +1,23 @@
+/* Variables globales */
 :root {
-    --background-color: #ee3434;
+    --background-color: #ff0000;
     --text-color: #000000;
-    --header-background-color: rgb(192, 192, 82);
-    --logo-background-color: red;
-    --edit-btn-color: rgb(109, 204, 196);
-    --delete-btn-color: rgb(88, 9, 13);
-    --edit-btn-hover-color: rgb(23, 10, 139);
-    --delete-btn-hover-color: rgb(212, 9, 9);
-    --footer-background-color: rgb(192, 192, 82);
+    --header-background-color: #333;
+    --logo-background-color: #ff0000;
+    --edit-btn-color: #28a745;
+    --delete-btn-color: #dc3545;
+    --edit-btn-hover-color: #218838;
+    --delete-btn-hover-color: #c82333;
+    --footer-background-color: #333;
     --shadow-color: rgba(0, 0, 0, 0.1);
     --shadow-hover-color: rgba(0, 0, 0, 0.2);
-    --link-color: #1100ff;
-    --link-hover-color: #ff0000;
+    --link-color: #0011ff;
+    --link-hover-color: #0056b3;
     --button-hover-transform: translateY(-2px);
-    --primary-color: #333;
-    --secondary-color: #fff;
-    --hover-color: #555;
-    --border-color: #ccc;
+    --primary-color: #007bff;
+    --secondary-color: #ffffff;
+    --hover-color: #0056b3;
+    --border-color: #ddd;
     --font-color: #333;
     --button-hover-size: scale(1.05);
 }
@@ -42,6 +43,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Otras reglas de estilo se mantienen igual */
 
 header {
     background-color: var(--header-background-color);
@@ -49,14 +51,44 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 2.5em;
     margin: 10px 0;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
 }
 
 #logo {
