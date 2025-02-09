@@ -1,0 +1,153 @@
+/* header.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para asegurar que el cuerpo ocupe al menos la altura de la ventana */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+.header-content nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.header-content nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-container {
+    margin-top: 20px;
+}
+
+#logo {
+    border-radius: 5px;
+    background-color: red;
+    max-width: 150px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 2.5em;
+}
+
+.characters-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 100px; /* Espacio adicional para el pie de página */
+}
+
+.character {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.character h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.character p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.about-us,
+.contact-form {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2,
+.contact-form h2 {
+    margin: 0 0 20px 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.about-us p,
+.contact-form p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-form form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que los inputs no se salgan del bloque */
+}
+
+.contact-form form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative; /* Cambiamos position a relative */
+    bottom: 0;
+    margin-top: auto; /* Añadimos margen superior automático */
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
