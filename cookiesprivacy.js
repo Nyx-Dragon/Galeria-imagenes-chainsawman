@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    backToHomeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+    for (let i = 0; i < backToHomeButtons.length; i++) {
+        backToHomeButtons[i].addEventListener('click', function() {
             window.location.href = './index.html';
         });
-    });
+    }
 });
