@@ -42,8 +42,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
-/* Otras reglas de estilo se mantienen igual */
 
 header {
     background-color: var(--header-background-color);
@@ -107,6 +107,7 @@ nav a:hover {
     padding: 20px;
     margin-bottom: 60px;
     flex: 1;
+    max-width: 100vw;
 }
 
 .character-card {
@@ -119,7 +120,7 @@ nav a:hover {
     max-width: 300px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden; /* Asegurarse de que el contenido se mantenga dentro del borde */
+    overflow: hidden;
 }
 
 .character-card:hover {
@@ -130,8 +131,8 @@ nav a:hover {
 .character-img {
     border-radius: 10px;
     border: none;
-    max-width: 100%; /* Asegura que las imágenes no sean más anchas que el contenedor */
-    max-height: 300px; /* Limita la altura máxima */
+    width: 100%;
+    max-height: 300px;
     object-fit: cover;
     opacity: 0;
     transform: translateY(20px);
@@ -184,6 +185,7 @@ footer {
     padding: 10px 0;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .footer-links a {
