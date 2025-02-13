@@ -92,7 +92,9 @@ nav a:hover {
 }
 
 #logo {
-    width: auto;
+    width: calc(80vw + 100px);
+    max-width: 700px;
+    height: auto;
     background-color: var(--logo-background-color);
     border-radius: 5px;
     display: block;
@@ -204,9 +206,6 @@ footer {
     }
     .character-card {
         max-width: 100%;
-    }
-    #logo {
-        max-width: 150px;
     }
 }
 
