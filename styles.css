@@ -205,6 +205,9 @@ footer {
     .character-card {
         max-width: 100%;
     }
+    #logo {
+        max-width: 150px;
+    }
 }
 
 button#back-to-home {

@@ -1,5 +1,5 @@
 .character-container {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px var(--shadow-color);
     border-radius: 10px;
@@ -8,6 +8,7 @@
     align-items: center;
     margin: 20px auto;
     max-width: 320px;
+    font-family: "Arial", sans-serif; /* Cambiar la fuente */
 }
 
 .character-image {
@@ -25,23 +26,39 @@ h2 {
     margin-top: 20px;
     font-size: 1.5em;
     color: var(--text-color);
+    font-family: "Georgia", serif; /* Fuente diferente para los títulos */
 }
 
 p,
 ul {
     margin: 20px;
     line-height: 1.6;
+    color: #000000; /* Cambiar el color del texto */
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 li {
     margin-bottom: 10px;
+    background-color: #db6060; /* Añadir fondo a los elementos de lista */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados para los elementos de lista */
 }
 
 b {
     font-weight: bold;
+    color: #000000; /* Cambiar el color del texto en negrita */
+}
+
+a {
+    color: #000; /* Color negro para los enlaces */
+    text-decoration: none; /* Opcional: eliminar el subrayado de los enlaces */
+}
+
+a:hover {
+    transition: color 0.3s;
+    color: #ff0000; /* Color ligeramente más claro para el efecto hover */
 }
