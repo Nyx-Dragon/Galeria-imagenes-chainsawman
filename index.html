@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <audio id="background-music" loop autoplay>
-            <source
-                src="https://soundcloud.com/user-656693483/sets/chainsaw-man-ost?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-                type="audio/mp3"
+        <div id="music-controls">
+            <button id="play-music">Reproducir</button>
+            <input
+                type="range"
+                id="volume-control"
+                min="0"
+                max="1"
+                step="0.1"
+                value="1"
             />
+        </div>
+        <audio id="background-music" loop>
+            <source src="./audio/cancion2.mp3" type="audio/mp3" />
             Tu navegador no soporta el formato de audio.
         </audio>
         <meta charset="UTF-8" />
@@ -54,14 +62,13 @@
                     data-name="Denji"
                     data-role="Hombre motosierra"
                 >
-                    <a href="denji.html">
-                        <img
+                    <a href="denji.html"
+                        ><img
                             class="character-img"
                             src="./assets/Denji.jpg"
                             alt="Denji"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Denji</h2>
                     <p class="character-description">Hombre motosierra</p>
                     <div class="buttons">
@@ -73,19 +80,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Power"
                     data-role="Poseida de la sangre"
                 >
-                    <a href="power.html">
-                        <img
+                    <a href="power.html"
+                        ><img
                             class="character-img"
                             src="./assets/Power.jpg"
                             alt="Power"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Power</h2>
                     <p class="character-description">Poseida de la sangre</p>
                     <div class="buttons">
@@ -97,19 +104,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Makima"
                     data-role="General antidemonios"
                 >
-                    <a href="makima.html">
-                        <img
+                    <a href="makima.html"
+                        ><img
                             class="character-img"
                             src="./assets/Makima.jpg"
                             alt="Makima"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Makima</h2>
                     <p class="character-description">General antidemonios</p>
                     <div class="buttons">
@@ -121,19 +128,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Himeno"
                     data-role="Cazadora de demonios"
                 >
-                    <a href="himeno.html">
-                        <img
+                    <a href="himeno.html"
+                        ><img
                             class="character-img"
                             src="./assets/Himeno.jpg"
                             alt="Himeno"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Himeno</h2>
                     <p class="character-description">Cazadora de demonios</p>
                     <div class="buttons">
@@ -145,19 +152,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Aki Hayakawa"
                     data-role="Cazador de demonios"
                 >
-                    <a href="aki.html">
-                        <img
+                    <a href="aki.html"
+                        ><img
                             class="character-img"
                             src="./assets/Aki.jpg"
                             alt="Aki Hayakawa"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Aki Hayakawa</h2>
                     <p class="character-description">Cazador de demonios</p>
                     <div class="buttons">
@@ -169,19 +176,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Kobeni Higashiyama"
                     data-role="Cazadora de demonios"
                 >
-                    <a href="kobeni.html">
-                        <img
+                    <a href="kobeni.html"
+                        ><img
                             class="character-img"
                             src="./assets/Kobeni.jpg"
                             alt="Kobeni Higashiyama"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Kobeni Higashiyama</h2>
                     <p class="character-description">Cazadora de demonios</p>
                     <div class="buttons">
@@ -193,19 +200,19 @@
                         </button>
                     </div>
                 </div>
+
                 <div
                     class="character-card"
                     data-name="Pochita"
                     data-role="Demonio motosierra"
                 >
-                    <a href="pochita.html">
-                        <img
+                    <a href="pochita.html"
+                        ><img
                             class="character-img"
                             src="./assets/Pochita4.jpg"
                             alt="Pochita"
                             loading="lazy"
-                        />
-                    </a>
+                    /></a>
                     <h2 class="character-name">Pochita</h2>
                     <p class="character-description">Demonio motosierra</p>
                     <div class="buttons">
@@ -244,9 +251,5 @@
         </footer>
         <script src="./main.js" defer></script>
         <script src="./cookiesprivacy.js" defer></script>
-        <script>
-            const music = document.getElementById("background-music");
-            music.play();
-        </script>
     </body>
 </html>

@@ -341,3 +341,40 @@ main {
 audio {
     display: none;
 }
+
+#music-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999; /* Se asegura de que esté por encima de todo */
+}
+
+#play-music {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 10000; /* Asegura que el botón en sí esté en la capa más alta */
+}
+
+#play-music:hover {
+    background: linear-gradient(135deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+}
+
+#volume-control {
+    width: 100px;
+    cursor: pointer;
+    z-index: 10000;
+}
