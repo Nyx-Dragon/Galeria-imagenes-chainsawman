@@ -585,44 +585,82 @@ nav a:hover {
 .header-gif {
     position: absolute;
     top: 20%;
-    width: 200px; /* Ajusta el tamaño según necesites */
+    width: 220px; /* Aumentado el tamaño */
     height: auto;
-    border-radius: 5%;
-    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.8));
-    animation: fadeIn 1s ease-in-out;
+    border-radius: 15%; /* Borde más curvado */
+    filter: drop-shadow(0 0 25px rgba(255, 69, 0, 0.8)); /* Sombra más suave */
+    animation: fadeInSlide 1s ease-out;
+    transform-style: preserve-3d; /* Permite la curvatura 3D */
+    transition: transform 0.3s ease;
 }
 
+/* Animación de entrada con curvatura */
+@keyframes fadeInSlide {
+    0% {
+        transform: translateY(-20px) rotateY(15deg) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px) rotateY(0deg) rotate(-5deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0) rotateY(0deg) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Estilo para el lado izquierdo con curvatura */
 .header-gif.left {
     left: 5%;
     transform: rotate(-5deg);
+    animation: fadeInSlideLeft 1s ease-out;
 }
 
+/* Animación de entrada con curvatura para la izquierda */
+@keyframes fadeInSlideLeft {
+    0% {
+        transform: translateX(-20px) rotateY(15deg) rotate(-10deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(5px) rotateY(0deg) rotate(5deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(0) rotateY(0deg) rotate(-5deg);
+        opacity: 1;
+    }
+}
+
+/* Estilo para el lado derecho con curvatura */
 .header-gif.right {
     right: 5%;
     transform: rotate(5deg);
+    animation: fadeInSlideRight 1s ease-out;
 }
 
-@keyframes fadeIn {
+/* Animación de entrada con curvatura para la derecha */
+@keyframes fadeInSlideRight {
     0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
+        transform: translateX(20px) rotateY(15deg) rotate(10deg);
         opacity: 0;
     }
+    50% {
+        transform: translateX(-5px) rotateY(0deg) rotate(-5deg);
+        opacity: 0.6;
+    }
     100% {
-        transform: translateY(0);
+        transform: translateX(0) rotateY(0deg) rotate(5deg);
         opacity: 1;
     }
 }
+
+/* Efecto al pasar el mouse para dar más curvatura */
+.header-gif:hover {
+    transform: scale(1.1) rotateY(15deg); /* Efecto 3D en hover */
+}
+
 @media (max-width: 768px) {
     #logo {
         animation: none; /* Eliminar animación en móviles */
@@ -846,15 +884,16 @@ button,
 input[type="text"] {
     text-shadow: 0 0 12px rgba(255, 69, 0, 0.9), 0 0 20px rgba(255, 69, 0, 0.8);
 }
-
-h2 {
-    color: #ff0000;
+.about.h2 {
+    color: #000000;
     font-family: "Roboto", sans-serif;
     font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
 }
-
+#subir-imagen {
+    color: red;
+}
 /* Ajustes visuales para dispositivos móviles */
 @media (max-width: 600px) {
     #upload-form {
