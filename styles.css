@@ -1,30 +1,31 @@
-/* Importación de fuentes japonesas y anime */
+/* Importación de fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap");
 
-/* Variables globales con estilo más japonés y profesional */
+/* Variables de color */
 :root {
-    --background-color: #0a0a0a;
-    --text-color: #ffffff;
-    --header-background-color: #111;
-    --logo-background-color: #ff4500;
-    --edit-btn-color: #ffcc00;
-    --delete-btn-color: #ff0033;
-    --edit-btn-hover-color: #ffdd44;
-    --delete-btn-hover-color: #ff2244;
-    --footer-background-color: #111;
-    --shadow-color: rgba(255, 0, 0, 0.3);
-    --shadow-hover-color: rgba(255, 0, 0, 0.6);
+    --bg-color: #0a0a0a;
+    --text-color: #fff;
+    --header-bg: #111;
+    --logo-bg: #ff4500;
+    --edit-color: #ffcc00;
+    --delete-color: #ff0033;
+    --edit-hover: #ffdd44;
+    --delete-hover: #ff2244;
+    --footer-bg: #111;
+    --shadow: rgba(255, 0, 0, 0.3);
+    --shadow-hover: rgba(255, 0, 0, 0.6);
     --link-color: #ff4500;
-    --link-hover-color: #ff2200;
-    --button-hover-transform: translateY(-2px);
-    --button-hover-size: scale(1.08);
+    --link-hover: #ff2200;
+    --btn-hover-transform: translateY(-2px);
+    --btn-hover-size: scale(1.08);
     --border-color: #ff4500;
     --primary-color: #ff4500;
-    --secondary-color: #ffffff;
+    --secondary-color: #fff;
 }
 
+/* Estilos globales */
 body {
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: "Noto Sans JP", sans-serif;
     margin: 0;
@@ -35,14 +36,27 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 header {
-    background-color: var(--header-background-color);
+    background-color: var(--header-bg);
     padding: 30px;
     text-align: center;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow);
     border-bottom: 3px solid var(--border-color);
     position: relative;
     overflow: hidden;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 header::before {
@@ -64,17 +78,14 @@ header::before {
     );
     background-size: 50px 50px;
     opacity: 0.2;
-    z-index: 1;
 }
 
 header h1 {
     font-family: "Oswald", sans-serif;
     font-size: 4em;
     letter-spacing: 5px;
-    color: var(--text-color);
-    text-shadow: 2px 2px 10px var(--shadow-hover-color);
+    text-shadow: 2px 2px 10px var(--shadow-hover);
     position: relative;
-    z-index: 2;
 }
 
 nav {
@@ -82,7 +93,6 @@ nav {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
 }
 
 nav a {
@@ -92,7 +102,6 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
-    position: relative;
 }
 
 nav a::before {
@@ -102,7 +111,7 @@ nav a::before {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: var(--link-hover-color);
+    background-color: var(--link-hover);
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out;
@@ -114,14 +123,14 @@ nav a:hover::before {
 }
 
 nav a:hover {
-    color: var(--link-hover-color);
+    color: var(--link-hover);
     transform: translateY(-5px);
 }
 
-/* Logo que se minimiza según el tamaño de la pantalla */
+/* Logo Responsivo */
 #logo {
     width: 100%;
-    max-width: 400px; /* Logo más grande */
+    max-width: 400px;
     transition: width 0.3s ease;
 }
 
@@ -137,35 +146,45 @@ nav a:hover {
     }
 }
 
-/* Contenedor de tarjetas con distribución flexible y mejor separación */
+/* Contenedor de personajes */
 .character-container {
     padding: 20px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     margin: auto;
     justify-content: center;
 }
 
-/* Tarjetas de personajes con efecto de brillo y animación */
+/* Tarjetas de personajes */
 .character-card {
     background-color: rgba(20, 20, 20, 0.9);
     border-radius: 15px;
     border: 2px solid var(--border-color);
-    box-shadow: 0 6px 12px var(--shadow-color);
+    box-shadow: 0 6px 12px var(--shadow);
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     overflow: hidden;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .character-card:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 12px 24px var(--shadow-hover-color);
+    box-shadow: 0 12px 24px var(--shadow-hover);
 }
 
+/* Imagenes de personajes */
 .character-img {
     width: 100%;
     height: 350px;
@@ -181,7 +200,6 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Estilos para el nombre y la descripción */
 .character-name {
     font-family: "Oswald", sans-serif;
     font-size: 1.6em;
@@ -195,7 +213,7 @@ nav a:hover {
     color: var(--secondary-color);
 }
 
-/* Botones con efecto neón */
+/* Botones de edición y eliminación */
 .edit-btn,
 .delete-btn {
     font-family: "Oswald", sans-serif;
@@ -207,43 +225,55 @@ nav a:hover {
     transition: all 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 0 5px var(--shadow-color);
+    box-shadow: 0 0 5px var(--shadow);
     margin: 5px;
 }
 
 .edit-btn {
-    background-color: var(--edit-btn-color);
+    background-color: var(--edit-color);
     color: black;
 }
 
 .delete-btn {
-    background-color: var(--delete-btn-color);
+    background-color: var(--delete-color);
     color: white;
 }
 
 .edit-btn:hover,
 .delete-btn:hover {
-    transform: var(--button-hover-transform) var(--button-hover-size);
-    box-shadow: 0 0 12px var(--edit-btn-hover-color);
+    transform: var(--btn-hover-transform) var(--btn-hover-size);
+    box-shadow: 0 0 12px var(--edit-hover);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .edit-btn:hover {
-    background-color: var(--edit-btn-hover-color);
+    background-color: var(--edit-hover);
 }
 
 .delete-btn:hover {
-    background-color: var(--delete-btn-hover-color);
+    background-color: var(--delete-hover);
 }
 
-/* Focus styles for accessibility */
 .edit-btn:focus,
 .delete-btn:focus {
     outline: 2px solid var(--text-color);
 }
 
+/* Footer */
 footer {
-    background-color: var(--footer-background-color);
-    color: var(--text-color);
+    background-color: var(--footer-bg);
     text-align: center;
     padding: 20px 0;
     border-top: 3px solid var(--border-color);
@@ -257,11 +287,11 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--link-hover-color);
-    text-shadow: 0 0 10px var(--link-hover-color);
+    color: var(--link-hover);
+    text-shadow: 0 0 10px var(--link-hover);
 }
 
-/* Media Queries para responsive */
+/* Media Queries */
 @media screen and (max-width: 900px) {
     .character-container {
         grid-template-columns: 1fr;
@@ -276,7 +306,7 @@ footer {
     }
 }
 
-/* Enlaces rojos */
+/* Estilo de enlaces */
 a {
     color: red;
     text-decoration: none;
@@ -284,4 +314,30 @@ a {
 
 a:hover {
     color: darkred;
+}
+
+/* Estilos adicionales para el main */
+main {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 69, 0, 0.4) 25%,
+        rgba(10, 10, 10, 0.4) 25%,
+        rgba(10, 10, 10, 0.4) 50%,
+        rgba(255, 69, 0, 0.4) 50%,
+        rgba(255, 69, 0, 0.4) 75%,
+        rgba(10, 10, 10, 0.4) 75%,
+        rgba(10, 10, 10, 0.4)
+    );
+    background-size: 50px 50px;
+    color: var(--text-color);
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+audio {
+    display: none;
 }

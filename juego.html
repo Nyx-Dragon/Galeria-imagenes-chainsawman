@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tres en Raya</title>
+        <link rel="icon" href="./assets/Pochita.jpg" />
+        <link rel="stylesheet" href="juego.css" />
+    </head>
+    <body>
+        <link rel="stylesheet" href="header.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="./assets/Pochita.jpg" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-content">
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="characters.html">Personajes</a>
+                    <a href="about.html">Sobre Nosotros</a>
+                    <a href="contact.html">Contacto</a>
+                    <a href="juego.html">Juego</a>
+                </nav>
+                <div class="logo-container">
+                    <img
+                        id="logo"
+                        src="./assets/chainsaw-man-png-logo-transparent.png"
+                        alt="Chainsaw Man Logo"
+                    />
+                </div>
+                <h1>Juego</h1>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Tres en Raya</h1>
+            <div id="game-board" class="board">
+                <div class="cell" id="cell-0"></div>
+                <div class="cell" id="cell-1"></div>
+                <div class="cell" id="cell-2"></div>
+                <div class="cell" id="cell-3"></div>
+                <div class="cell" id="cell-4"></div>
+                <div class="cell" id="cell-5"></div>
+                <div class="cell" id="cell-6"></div>
+                <div class="cell" id="cell-7"></div>
+                <div class="cell" id="cell-8"></div>
+            </div>
+            <button id="reset-btn">Reiniciar Juego</button>
+            <p id="message"></p>
+        </div>
+        <footer>
+            <p>
+                &copy; 2025 Galería de Personajes. Todos los derechos
+                reservados.
+            </p>
+            <p>
+                Esta galería es solo para fines informativos y no posee derechos
+                sobre las imágenes utilizadas.
+            </p>
+            <div class="footer-links">
+                <a href="./privacy.html">Política de Privacidad</a> |
+                <a href="./cookies.html">Política de Cookies</a> |
+                <a href="https://www.linkedin.com" target="_blank"
+                    ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://www.twitter.com" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com" target="_blank"
+                    ><i class="fab fa-facebook"></i
+                ></a>
+            </div>
+        </footer>
+        <script src="pong.js"></script>
+        <script src="./main.js" defer></script>
+        <script src="./cookiesprivacy.js" defer></script>
+        <script>
+            const music = document.getElementById("background-music");
+            music.play();
+        </script>
+    </body>
+</html>
