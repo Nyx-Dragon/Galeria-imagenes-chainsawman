@@ -48,7 +48,7 @@ body {
 
 /* Contenedor del juego */
 .container {
-    color: black;
+    color: rgb(255, 0, 0);
     text-align: center;
     display: flex; /* Agregado para centrar horizontalmente */
     justify-content: center; /* Centra el juego horizontalmente */
