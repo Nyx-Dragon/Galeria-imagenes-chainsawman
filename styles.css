@@ -298,6 +298,7 @@ nav a:focus {
 }
 
 /* Botones de edición y eliminación */
+/* Botones edit y delete */
 .edit-btn,
 .delete-btn {
     font-family: "Oswald", sans-serif;
@@ -311,18 +312,32 @@ nav a:focus {
     letter-spacing: 1px;
     box-shadow: 0 0 5px var(--shadow);
     margin: 5px;
+    background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #ff4c4c
+    ); /* Degradado para el botón editar */
 }
 
 .edit-btn {
-    background-color: var(--edit-color);
+    background: linear-gradient(
+        135deg,
+        #eeff00,
+        #c57c1c
+    ); /* Degradado de rojo */
     color: black;
 }
 
 .delete-btn {
-    background-color: var(--delete-color);
+    background: linear-gradient(
+        135deg,
+        #ff6347,
+        #ff4500
+    ); /* Degradado de naranja */
     color: white;
 }
 
+/* Efecto hover */
 .edit-btn:hover,
 .delete-btn:hover {
     transform: var(--btn-hover-transform) var(--btn-hover-size);
@@ -330,6 +345,7 @@ nav a:focus {
     animation: pulse 1s;
     border: 2px solid var(--primary-color);
 }
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -342,14 +358,24 @@ nav a:focus {
     }
 }
 
+/* Hover con variación en los degradados */
 .edit-btn:hover {
-    background-color: var(--edit-hover);
+    background: linear-gradient(
+        135deg,
+        #fbff00,
+        #b88806
+    ); /* Invertido para el hover */
 }
 
 .delete-btn:hover {
-    background-color: var(--delete-hover);
+    background: linear-gradient(
+        135deg,
+        #ff4500,
+        #ff6347
+    ); /* Invertido para el hover */
 }
 
+/* Focus effect */
 .edit-btn:focus,
 .delete-btn:focus {
     outline: 2px solid var(--text-color);
@@ -1015,4 +1041,50 @@ input[type="text"] {
     #image-upload button {
         width: 100%;
     }
+}
+.character-gallery {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+.character-detail {
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    width: 250px;
+}
+
+.character-detail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+}
+
+.character-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #ff0000;
+}
+
+h2 {
+    color: #ffcc00;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
+
+p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
