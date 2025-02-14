@@ -628,3 +628,352 @@ nav a:hover {
         animation: none; /* Eliminar animación en móviles */
     }
 }
+/* Estilos para el botón Back to Home */
+#back-to-home {
+    background-color: var(--button-bg);
+    color: #fff;
+    padding: 12px 20px;
+    border: 2px solid var(--button-bg);
+    border-radius: 50px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; /* Si es un enlace */
+}
+
+#back-to-home:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow);
+}
+
+#back-to-home:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Icono dentro del botón */
+#back-to-home i {
+    font-size: 1.2em;
+}
+
+/* Estilos cuando el botón se usa dentro de un contenedor centrado */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.upload-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#upload-form {
+    display: inline-block;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#upload-form input[type="file"] {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#upload-form input[type="text"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+#upload-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#upload-form button:hover {
+    background-color: #fc7b26;
+}
+/* Estilos para la sección de carga */
+.upload-section {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+    animation: slideIn 1s ease-out;
+}
+
+/* Estilo general del formulario */
+#upload-form {
+    background-color: #ff7441;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo de los campos de entrada */
+#upload-form input[type="file"] {
+    display: block;
+    margin: 0 auto 20px;
+    border: 2px solid var(--border-color);
+    padding: 12px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 80%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#upload-form input[type="file"]:hover {
+    background-color: rgba(255, 69, 0, 0.1);
+    border-color: #ff4500;
+}
+
+/* Estilo de los campos de texto */
+#upload-form input[type="text"] {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    width: 80%;
+    background-color: #333;
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(255, 69, 0, 0.6);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#upload-form input[type="text"]:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0.6);
+}
+
+/* Estilo del botón */
+#upload-form button {
+    padding: 15px 30px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    margin-top: 20px;
+    width: 80%;
+}
+
+#upload-form button:hover {
+    background-color: #e43e00;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 69, 0, 0.4);
+}
+
+/* Efecto de "sangre" en el botón */
+#upload-form button::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background: red;
+    bottom: -5px;
+    left: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+#upload-form button:hover::after {
+    animation: bloodDrip 0.5s forwards;
+}
+
+@keyframes bloodDrip {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#upload-form {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Estilo de texto luminoso */
+button,
+input[type="text"] {
+    text-shadow: 0 0 12px rgba(255, 69, 0, 0.9), 0 0 20px rgba(255, 69, 0, 0.8);
+}
+
+h2 {
+    color: #ff0000;
+    font-family: "Roboto", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ajustes visuales para dispositivos móviles */
+@media (max-width: 600px) {
+    #upload-form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #upload-form input[type="text"],
+    #upload-form input[type="file"],
+    #upload-form button {
+        width: 100%;
+    }
+}
+/* Estilo general para el contenedor de la carga de imagen */
+#image-upload {
+    background: linear-gradient(45deg, #ff7441, #ff4500);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor para la imagen */
+#image-upload img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo de los campos de entrada (file input) */
+#image-upload input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    background-color: rgba(255, 69, 0, 0.1);
+    border: 2px solid #ff4500;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 80%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#image-upload input[type="file"]:hover {
+    background-color: rgba(255, 69, 0, 0.2);
+    border-color: #e43e00;
+}
+
+/* Estilo para el texto de instrucciones o título */
+#image-upload h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 69, 0, 0.7);
+}
+
+/* Animación cuando se pasa el ratón por encima */
+#image-upload:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los botones de carga y otros controles (si los hubiera) */
+#image-upload button {
+    padding: 12px 25px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 80%;
+}
+
+#image-upload button:hover {
+    background-color: #e43e00;
+    transform: translateY(-5px);
+}
+
+/* Efecto de desvanecimiento en la imagen cargada */
+#image-upload img.uploaded {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efecto de transición suave en el botón */
+#image-upload button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+    #image-upload {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #image-upload input[type="file"],
+    #image-upload button {
+        width: 100%;
+    }
+}

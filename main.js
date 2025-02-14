@@ -80,3 +80,41 @@ function initMusicControls() {
         });
     }
 }
+document.getElementById("upload-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Obtener los valores del formulario
+    const imageFile = document.getElementById("image-upload").files[0];
+    const characterName = document.getElementById("character-name").value;
+    const characterRole = document.getElementById("character-role").value;
+
+    if (imageFile && characterName && characterRole) {
+        // Crear un objeto URL para la imagen cargada
+        const imageUrl = URL.createObjectURL(imageFile);
+
+        // Crear una nueva tarjeta de personaje
+        const newCard = document.createElement("div");
+        newCard.classList.add("character-card");
+
+        // Crear el contenido de la tarjeta
+        newCard.innerHTML = `
+            <a href="#">
+                <img class="character-img" src="${imageUrl}" alt="${characterName}" loading="lazy" />
+            </a>
+            <h2 class="character-name">${characterName}</h2>
+            <p class="character-description">${characterRole}</p>
+            <div class="buttons">
+                <button class="edit-btn"><i class="fa fa-pencil"></i> Editar</button>
+                <button class="delete-btn"><i class="fa fa-trash"></i> Borrar</button>
+            </div>
+        `;
+
+        // Añadir la nueva tarjeta a la sección de personajes
+        document.querySelector(".character-container").appendChild(newCard);
+
+        // Limpiar el formulario
+        document.getElementById("upload-form").reset();
+    } else {
+        alert("Por favor, completa todos los campos.");
+    }
+});
