@@ -88,6 +88,14 @@ header h1 {
     position: relative;
 }
 
+/* Glow en textos principales */
+h1,
+h2,
+h3,
+p {
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
 nav {
     position: absolute;
     bottom: 10px;
@@ -101,7 +109,7 @@ nav a {
     font-size: 1.2em;
     margin: 0 15px;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.5s ease, transform 0.5s ease;
 }
 
 nav a::before {
@@ -128,10 +136,84 @@ nav a:hover {
 }
 
 /* Logo Responsivo */
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes chaotic-shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(1deg);
+    }
+    20% {
+        transform: rotate(-1deg);
+    }
+    30% {
+        transform: rotate(2deg);
+    }
+    40% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+    60% {
+        transform: rotate(-1deg);
+    }
+    70% {
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes chainsaw-intro {
+    0% {
+        transform: scale(0) rotate(-15deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1) rotate(15deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
 #logo {
     width: 100%;
     max-width: 400px;
-    transition: width 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    animation: chainsaw-intro 1s ease-out,
+        shake 0.3s infinite alternate ease-in-out;
+}
+
+#logo:hover {
+    animation: chaotic-shake 0.3s infinite;
 }
 
 @media (max-width: 768px) {
@@ -243,9 +325,8 @@ nav a:hover {
 .delete-btn:hover {
     transform: var(--btn-hover-transform) var(--btn-hover-size);
     box-shadow: 0 0 12px var(--edit-hover);
-    animation: pulse 1s infinite;
+    animation: pulse 1s;
 }
-
 @keyframes pulse {
     0% {
         transform: scale(1);
