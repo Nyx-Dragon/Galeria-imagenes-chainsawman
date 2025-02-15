@@ -312,7 +312,7 @@ nav a:focus {
 .character-img {
     width: 100%;
     height: 350px;
-    object-fit: contain; /* Cambiado de cover a contain */
+    object-fit: cover; /* Las imágenes cubrirán todo el espacio sin distorsionarse */
     border-radius: 10px;
     border: 2px solid var(--border-color);
     filter: brightness(0.9) contrast(1.1);
