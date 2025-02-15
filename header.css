@@ -18,19 +18,47 @@ header {
     border-bottom: 2px solid #444;
 }
 
-.header-content nav a {
-    color: #ff7b00; /* Color más vibrante */
-    text-decoration: none;
+nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    color: var(--link-color);
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
     margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s; /* Transición suave */
+    text-decoration: none;
+    transition: color 0.5s ease, transform 0.5s ease;
 }
 
-.header-content nav a:hover {
-    color: #ffaf00; /* Cambio de color al pasar el ratón */
-    text-decoration: underline;
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--link-hover);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
 }
 
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+nav a:hover {
+    color: var(--link-hover);
+    transform: translateY(-5px);
+}
+nav a:focus {
+    outline: 3px solid var(--link-hover);
+}
 .logo-container {
     margin-top: 20px;
 }
@@ -86,9 +114,9 @@ h1 {
 
 .about-us,
 .contact-form {
-    background-color: white;
+    background-color: #ff7b00;
     border: 1px solid #ddd;
-    color: #333;
+    color: #000000;
     border-radius: 10px;
     margin: 20px auto;
     padding: 20px;
@@ -106,7 +134,7 @@ h1 {
 .about-us p,
 .contact-form p {
     font-size: 1.2em;
-    color: #555;
+    color: #000000;
 }
 
 .contact-form form label {
@@ -127,18 +155,56 @@ h1 {
 }
 
 .contact-form form button {
-    background-color: #222;
+    position: relative;
+    background: linear-gradient(45deg, #8b0000, #222); /* Rojo oscuro a negro */
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
+    border: 2px solid #8b0000; /* Borde rojo sangre */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transición suave */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4); /* Sombra roja suave */
+    overflow: hidden;
 }
 
+/* Efecto hover con brillo */
 .contact-form form button:hover {
-    background-color: #444; /* Cambio de color al pasar el ratón */
+    background: linear-gradient(45deg, #ff0000, #222);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    transform: scale(1.05);
+}
+
+/* Pseudo-elemento para el goteo de sangre */
+.contact-form form button::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: blood-drip 1.5s infinite ease-in-out;
+}
+
+/* Animación del goteo */
+@keyframes blood-drip {
+    0% {
+        top: 100%;
+        opacity: 1;
+    }
+    50% {
+        top: 110%;
+        opacity: 0.7;
+    }
+    100% {
+        top: 120%;
+        opacity: 0;
+    }
 }
 
 footer {
