@@ -309,21 +309,20 @@ nav a:focus {
     box-shadow: 0 12px 24px var(--shadow-hover);
 }
 
-/* Imagenes de personajes */
 .character-img {
     width: 100%;
     height: 350px;
-    object-fit: cover;
+    object-fit: contain; /* Cambiado de cover a contain */
     border-radius: 10px;
     border: 2px solid var(--border-color);
     filter: brightness(0.9) contrast(1.1);
-    transition: filter 0.3s, transform 0.3s, box-shadow 0.3s; /* Añadido box-shadow */
+    transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .character-img:hover {
     filter: brightness(1) contrast(1.3);
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 0, 102, 0.8), 0 0 30px rgba(255, 204, 0, 0.6); /* Efecto de neón con rosa sangre y dorado */
+    box-shadow: 0 0 15px rgba(255, 0, 102, 0.8), 0 0 30px rgba(255, 204, 0, 0.6);
 }
 
 .character-name {
@@ -1114,21 +1113,12 @@ input[type="text"] {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
     width: 250px;
 }
 
 .character-detail:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
-}
-
-.character-img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid #ff0000;
 }
 
 h2 {
