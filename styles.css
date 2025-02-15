@@ -656,6 +656,7 @@ nav a:hover {
     animation: fadeInSlide 1s ease-out;
     transform-style: preserve-3d; /* Curvatura 3D */
     transition: transform 0.3s ease;
+    z-index: 10; /* Asegura que esté encima del título */
 }
 
 /* Adaptación para dispositivos móviles */
@@ -693,7 +694,7 @@ nav a:hover {
 
 /* Estilo para el lado izquierdo con curvatura */
 .header-gif.left {
-    left: 5%;
+    left: 1%;
     transform: rotate(-5deg);
     animation: fadeInSlideLeft 1s ease-out;
 }
@@ -716,7 +717,7 @@ nav a:hover {
 
 /* Estilo para el lado derecho con curvatura */
 .header-gif.right {
-    right: 5%;
+    right: 1%;
     transform: rotate(5deg);
     animation: fadeInSlideRight 1s ease-out;
 }
@@ -739,6 +740,7 @@ nav a:hover {
 
 /* Efecto al pasar el mouse para dar más curvatura */
 .header-gif:hover {
+    filter: drop-shadow(0 0 30px rgba(255, 69, 0, 1));
     transform: scale(1.1) rotateY(15deg); /* Efecto 3D en hover */
 }
 
