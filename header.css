@@ -112,29 +112,72 @@ h1 {
     color: #555;
 }
 
+/* Background and container styles */
 .about-us,
 .contact-form {
-    background-color: #ff7b00;
-    border: 1px solid #ddd;
-    color: #000000;
-    border-radius: 10px;
+    background-color: #ff7b00; /* Fuego, un toque llamativo */
+    border: 1px solid #2c2c2c; /* Gris oscuro para un borde más elegante */
+    color: #ffffff; /* Texto blanco para un contraste más claro */
+    border-radius: 15px; /* Bordes más suaves */
     margin: 20px auto;
     padding: 20px;
     max-width: 600px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más prominente para un toque de elegancia */
+    font-family: "Roboto", sans-serif; /* Fuente más moderna y limpia */
 }
 
+/* Header styling */
 .about-us h2,
 .contact-form h2 {
     margin: 0 0 20px 0;
-    font-size: 2em;
+    font-size: 2.5em; /* Aumentamos el tamaño para darle más impacto */
     text-align: center;
+    color: #ffcc00; /* Amarillo para resaltar, inspirando el tema de Chainsaw Man */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra sutil para un efecto de profundidad */
 }
 
+/* Text paragraph styling */
 .about-us p,
 .contact-form p {
     font-size: 1.2em;
-    color: #000000;
+    color: #ffffff; /* Texto blanco */
+    line-height: 1.6;
+}
+
+/* Form input fields */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background-color: #333333; /* Fondo oscuro para campos de entrada */
+    color: #ffffff; /* Texto claro */
+    border: 1px solid #444444; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ffcc00; /* Amarillo brillante para el botón */
+    color: #000000; /* Texto negro para contraste */
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #ff7b00; /* Cambio de color al pasar el cursor */
+}
+
+/* Hover effect for containers */
+.about-us:hover,
+.contact-form:hover {
+    transform: scale(1.05); /* Sutil aumento de tamaño */
+    transition: transform 0.3s ease;
 }
 
 .contact-form form label {
